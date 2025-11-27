@@ -1,0 +1,7 @@
+function x2=demean(x)
+   
+dims = size(x); 
+dimsize = size(x,dim); 
+dimrep = ones(length(dims),1); 
+dimrep(dim) = dimsize;  
+x2 = x - repmat(mean(x,dim),dimrep);

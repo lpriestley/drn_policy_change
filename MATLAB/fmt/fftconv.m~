@@ -1,0 +1,11 @@
+function res=fftconv(x,y)
+
+% res=fftconv(x,y)
+%
+% uses FFT to do convolution
+% output is length of x
+
+len=max(length(x),length(y));
+zeropad = 2^nextpow2(len);
+res = real(ifft(fft(x,zeropad).*fft(y,zeropad)));
+res = res(1:length(x));

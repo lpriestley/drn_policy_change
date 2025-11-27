@@ -1,0 +1,8 @@
+function [ret] = unsquash(x,dims)
+
+% function [ret] = unsquash(x)
+%
+% performs ret = reshape(x,dims);
+% see squash
+
+ret = reshape(x,dims);

@@ -1,0 +1,5 @@
+function vf(vargin)
+
+% alias for ViewFMRI
+
+ViewFMRI(vargin);

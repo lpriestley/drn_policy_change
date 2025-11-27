@@ -1,0 +1,11 @@
+function cs = makefcontrast(fc, tc, fcopenum)
+   
+   cs = zeros(size(fc,1),
+   
+   j=1;
+   for i=1:size(fc,2),
+      if(fc(fcopenum,i))
+	 cs(j,:) = tc(i,:);
+	 j=j+1;
+      end;
+   end;

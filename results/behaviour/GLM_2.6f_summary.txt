@@ -1,0 +1,25 @@
+
+Call:
+stats::glm(formula = formula, family = "binomial", data = data)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.2061  -0.1755  -0.1644  -0.1536   3.0206  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -4.2747     0.2448 -17.464   <2e-16 ***
+mu_val_z     -0.1246     0.2412  -0.516    0.606    
+trial_z       0.1493     0.2481   0.602    0.547    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 190.24  on 1314  degrees of freedom
+Residual deviance: 189.60  on 1312  degrees of freedom
+  (25 observations deleted due to missingness)
+AIC: 195.6
+
+Number of Fisher Scoring iterations: 7
+

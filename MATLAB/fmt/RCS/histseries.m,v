@@ -1,0 +1,29 @@
+head	1.1;
+access;
+symbols;
+locks
+	woolrich:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2002.11.18.14.48.17;	author woolrich;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@function histseries(tseries, i, j, k, varargin)
+
+hist(tseries,sqrt(length(tseries)));
+
+title(sprintf('Slice %d; X: %d  Y: %d',k,i,j)); 
+@

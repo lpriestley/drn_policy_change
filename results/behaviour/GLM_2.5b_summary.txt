@@ -1,0 +1,29 @@
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: reject_switch ~ env_bin + (env_bin | subject)
+   Data: data
+Control: lme4::glmerControl(optimizer = "optimx", optCtrl = list(method = "nlminb"))
+
+     AIC      BIC   logLik deviance df.resid 
+   842.5    866.2   -416.3    832.5      834 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.5492 -0.5720 -0.3446 -0.1579  4.0290 
+
+Random effects:
+ Groups  Name        Variance Std.Dev. Corr
+ subject (Intercept) 1.63054  1.2769       
+         env_bin     0.09066  0.3011   0.59
+Number of obs: 839, groups:  subject, 26
+
+Fixed effects:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -1.11941    0.26973  -4.150 3.32e-05 ***
+env_bin      0.05058    0.11171   0.453    0.651    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+        (Intr)
+env_bin 0.339 

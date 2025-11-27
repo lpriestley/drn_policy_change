@@ -1,0 +1,93 @@
+RSA inferential statistics – Pearson r metric
+============================================
+
+dACC_H2: adaptive vs non-adaptive (t-test)
+
+	Welch Two Sample t-test
+
+data:  d_rsa$dACC_H2[d_rsa$mean_split == "adaptive"] and d_rsa$dACC_H2[d_rsa$mean_split == "non-adaptive"]
+t = 3.0261, df = 13.611, p-value = 0.009315
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.02444195 0.14450699
+sample estimates:
+  mean of x   mean of y 
+ 0.01715695 -0.06731752 
+
+
+
+AI_H2: adaptive vs non-adaptive (t-test)
+
+	Welch Two Sample t-test
+
+data:  d_rsa$AI_H2[d_rsa$mean_split == "adaptive"] and d_rsa$AI_H2[d_rsa$mean_split == "non-adaptive"]
+t = 2.7721, df = 11.061, p-value = 0.01807
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.01013235 0.08797730
+sample estimates:
+  mean of x   mean of y 
+ 0.01514235 -0.03391248 
+
+
+
+Correlation: dACC_H2 ~ p_accept_10_diff
+
+	Pearson's product-moment correlation
+
+data:  d_rsa$dACC_H2 and d_rsa$p_accept_10_diff
+t = 3.9102, df = 21, p-value = 0.0008052
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.3234208 0.8372741
+sample estimates:
+      cor 
+0.6490898 
+
+
+
+Correlation: AI_H2 ~ p_accept_10_diff
+
+	Pearson's product-moment correlation
+
+data:  d_rsa$AI_H2 and d_rsa$p_accept_10_diff
+t = 2.9043, df = 21, p-value = 0.008482
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.1579703 0.7762348
+sample estimates:
+      cor 
+0.5353151 
+
+
+
+Supplementary: dACC_H1 ~ p_accept_10_diff
+
+	Pearson's product-moment correlation
+
+data:  d_rsa$dACC_H1 and d_rsa$p_accept_10_diff
+t = -1.1879, df = 21, p-value = 0.2481
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.6009685  0.1798819
+sample estimates:
+       cor 
+-0.2509259 
+
+
+
+Supplementary: AI_H1 ~ p_accept_10_diff
+
+	Pearson's product-moment correlation
+
+data:  d_rsa$AI_H1 and d_rsa$p_accept_10_diff
+t = -0.16755, df = 21, p-value = 0.8685
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.4420813  0.3814093
+sample estimates:
+       cor 
+-0.0365372 
+
+
+

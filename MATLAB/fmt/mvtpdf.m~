@@ -1,0 +1,8 @@
+function p = mvtpdf(t, m, C, v)
+
+% p = mvtpdf(t, m, C, v)
+
+k = length(m);
+
+term = exp(gammaln((v + k) / 2) - gammaln(v/2));
+p = term ./ (sqrt(det(C))*(v*pi).^(k/2) .* (1 + (t-m)'*inv(C)*(t-m)/ v) .^ ((v + k)/2));

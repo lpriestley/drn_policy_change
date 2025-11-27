@@ -1,0 +1,64 @@
+function actminmax=overlay_act(act, bg, cmapname, cbar, actminmax, bgminmax)
+
+% overlay_act(act, bg, cmapname, cbar, actminmax, bgminmax)
+
+if nargin<3
+  cmapname='red2yellow';
+end;
+
+if nargin<6
+  bgminmax=[min(squash(bg)),max(squash(bg))];
+end;
+
+if nargin<5
+  actminmax=[min(squash(act)),max(squash(act))];
+end;
+
+if nargin<4
+  cbar=0;
+end;
+
+if(actminmax(1)<min(squash(act))), actminmax(1)=min(squash(act)); end;
+if(actminmax(2)>max(squash(act))), actminmax(2)=max(squash(act)); end;
+
+
+exec_str=strcat('[gray(100);',cmapname,'(100)];');
+cmap=eval(exec_str);
+
+bg2=(bg-bgminmax(1))./range(bgminmax);
+bg2(bg2<0)=0;
+bg2(bg2>1)=1;
+
+act2=(act-actminmax(1))./range(actminmax)+1;
+%act2(act2<1 & act2orig ~= 0)=1;
+act2(act2<1)=1;
+act2(act2>2)=2;
+
+bg2(act2>1)=act2(act2>1);
+
+snugplot(1,1,1,0.02);
+imagesc(bg2);
+axis image;
+axis off;
+colormap(cmap);
+
+tmp=get(gcf,'Position');
+tmp(3)=tmp(4);
+set(gcf,'Position',tmp);
+
+if(cbar>0),
+  figure;
+  tmp=actminmax(1):range(actminmax)/100:actminmax(2);
+  h=imagesc(repmat(tmp,10,1)');
+  axis xy;
+  axis image;
+  colormap(cmapname);
+  set(gca,'Xtick',[]);
+  set(gca,'Ytick',[]);
+  text(2,-3,sprintf('%1.1f',actminmax(1)),'FontSize',18);
+  text(2,105,sprintf('%1.1f',actminmax(2)),'FontSize',18);
+  tmp=get(gcf,'Position');
+  tmp(3)=50;
+  set(gcf,'Position',tmp);
+  set(gcf,'PaperPositionMode','auto');
+end;

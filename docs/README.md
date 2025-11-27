@@ -1,6 +1,6 @@
 # README
 
-Reproducible analysis code for *ACTIVITY IN HUMAN DORSAL RAPHE NUCLEUS SIGNALS CHANGES IN BEHAVIOURAL POLICY *.
+Analysis code for *ACTIVITY IN HUMAN DORSAL RAPHE NUCLEUS SIGNALS CHANGES IN BEHAVIOURAL POLICY *.
 
 This repository contains all code required to:
 
